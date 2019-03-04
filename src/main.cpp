@@ -26,7 +26,16 @@ int main(int argc, char** argv)
 		hidScanInput();
 
 		u64 kDown = hidKeysDown(CONTROLLER_P1_AUTO);
-
+		u64 kHeld = hidKeysHeld(CONTROLLER_P1_AUTO);
+		
+		start.updatePosition(kHeld);
+		if(kHeld & KEY_ZL) {
+			start.drawBrush();
+		}
+		
+		if(kDown & KEY_Y) {
+			start.erase();
+		}
 		if(kDown & KEY_B) break;
 
 	}
