@@ -1,2 +1,3 @@
 # etchNX
-e
+
+## Etch and sketch drawing app for the Nintendo Switch!
